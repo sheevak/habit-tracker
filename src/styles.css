@@ -11,10 +11,40 @@ header {
     align-items: center;
     padding: 20px;
 
-    background-color: red;
+    background-color: rgb(238, 186, 186);
 }
 
-.header-title {
-    align-self: flex-start;
+/* ---- Calendar ------------------------------------------------ */
+.calendar-page {
+    padding: 20px;
+}
+
+.calendar-title {
+    text-align: center;
+    margin: 5px;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+/* ---- Day ------------------------------------------------ */
+.day-container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.day-habit {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.day-habit-button {
+    display: inline;
+    padding: 5px;
 }
 

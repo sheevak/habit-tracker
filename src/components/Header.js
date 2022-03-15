@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <Link to="/">
-                <h1 class="header-title">Habit Tracker</h1>
+                <h1 className="header-title">Habit Tracker</h1>
             </Link>
             <Link to="/habits">
                 <h3>Habits</h3>
