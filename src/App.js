@@ -8,7 +8,7 @@ import Profile from "./pages/Profile"
 
 function App() {
     return (
-        <div>
+        <div className="app-container">
             <Header />
             <Routes>
                 <Route path="/habits" element={<Habits />}></Route>

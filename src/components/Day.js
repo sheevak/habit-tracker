@@ -7,10 +7,13 @@ function Day(props) {
 
     const {habits} = useContext(Context)
 
-    const habitElements = habits.map(habit => 
-        <Habit 
+    const habitElements = habits.map((habit,ind) => 
+        <Habit
+            key={ind} 
+            day={props.index}
             name={habit.name} 
             frequency={habit.frequency}
+            completed={habit.completed}
         />
     )
 

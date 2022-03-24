@@ -9,10 +9,13 @@ function Habit(props) {
                 <p className="day-habit-button">
                     {props.name}
                 </p>
-                <button className="day-habit-button">Complete</button>
+                <button className="pie" style={{"--width":"20px", "--percentage": 60, "--color": "red"}} ></button>
+                
 
         </div>
     )
 }
 
 export default Habit
+
+{/* <button className="day-habit-button">Complete</button> */}
