@@ -69,10 +69,8 @@ header {
 
 /* ----------------- */
 .pie {
-    display: inline;
     width: var(--width);
     height: var(--width);
-    border: none;
     border-radius: 50%;
     background: conic-gradient(var(--color) calc(var(--percentage)*1%),#0000 0);
 }

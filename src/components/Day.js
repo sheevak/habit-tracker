@@ -5,11 +5,12 @@ import Habit from "./Habit"
 
 function Day(props) {
 
-    const {habits} = useContext(Context)
+    const {allHabits} = useContext(Context)
 
-    const habitElements = habits.map((habit,ind) => 
+    const habitElements = allHabits.map(habit => 
         <Habit
-            key={ind} 
+            key={habit.id}
+            id={habit.id} 
             day={props.index}
             name={habit.name} 
             frequency={habit.frequency}
