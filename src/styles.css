@@ -44,28 +44,26 @@ header {
 
 .calendar-container {
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
+    flex-direction: column;
+    justify-content: start;
     height: 100%;
 }
 
-/* ---- Day ------------------------------------------------ */
-.day-container {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid black;
-}
-
-.day-habit {
-    padding: 10px 0;
+/* ---- Habit Component ---------------------------------------------- */
+.habit {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-.day-habit-button {
-    display: inline;
-    padding: 5px;
+.habit-title {
+    width: 150px;
+}
+
+.days {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 250px;
 }
 
 /* ----------------- */

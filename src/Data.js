@@ -1,37 +1,39 @@
 const Data = [{
         id: 0,
         name: "Read", 
-        frequency: [3, "day"],
+        frequency: [1, 7],
+        days: [1, 2, 3, 4, 5, 6, 0],
         streak: 0,
         total: 0,
         completed: [
             {date: "28/3/2022", count: 1}, 
             {date: "29/3/2022", count: 1}, 
-            {date: "2/4/2022", count: 2}
+            {date: "2/4/2022", count: 1}
         ]
     },
     {
         id: 1,
         name: "Exercise", 
-        frequency: [1, "day"],
+        frequency: [1, 3],
+        days: [1, 3, 6],
         streak: 0,
         total: 0,
         completed: [
-            {date: "30/3/2022", count: 1}, 
-            {date: "3/4/2022", count: 0}, 
-            {date: "29/3/2022", count: 1}
+            {date: "28/3/2022", count: 1},  
+            {date: "30/3/2022", count: 1}
         ]
     },
     {
         id: 2,
         name: "Skin Care", 
-        frequency: [2, "day"],
+        frequency: [2, 7],
+        days: [1, 2, 3, 4, 5, 6, 0],
         streak: 0,
         total: 0,
         completed: [
-            {date: "28/3/2022", count: 2}, 
-            {date: "29/3/2022", count: 1}, 
-            {date: "3/4/2022", count: 0}
+            {date: "28/3/2022", count: 1}, 
+            {date: "31/3/2022", count: 1}, 
+            {date: "3/4/2022", count: 2}
         ]
     }
 ]
