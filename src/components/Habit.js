@@ -6,13 +6,13 @@ function Habit(props) {
 
     const {allHabits, updateComplete} = useContext(Context)
 
-    const completed = props.completed.filter(obj => obj.date == props.day);
+    const completed = props.completed.filter(obj => obj.date == props.date);
     let count = completed.length === 1 ? completed[0].count: 0;
     const comp = count === props.frequency[0];
 
     function complete() {
         count += 1
-        updateComplete(props.day, props.id, count)
+        updateComplete(props.date, props.id, count)
     }
 
     return (

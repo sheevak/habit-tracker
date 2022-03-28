@@ -1,13 +1,13 @@
 const Data = [{
         id: 0,
         name: "Read", 
-        frequency: [3, "week"],
+        frequency: [3, "day"],
         streak: 0,
         total: 0,
         completed: [
-            {date: 3, count: 1}, 
-            {date: 6, count: 1}, 
-            {date: 0, count: 2}
+            {date: "28/3/2022", count: 1}, 
+            {date: "29/3/2022", count: 1}, 
+            {date: "2/4/2022", count: 2}
         ]
     },
     {
@@ -17,9 +17,9 @@ const Data = [{
         streak: 0,
         total: 0,
         completed: [
-            {date: 4, count: 1}, 
-            {date: 5, count: 0}, 
-            {date: 2, count: 1}
+            {date: "30/3/2022", count: 1}, 
+            {date: "3/4/2022", count: 0}, 
+            {date: "29/3/2022", count: 1}
         ]
     },
     {
@@ -29,9 +29,9 @@ const Data = [{
         streak: 0,
         total: 0,
         completed: [
-            {date: 2, count: 2}, 
-            {date: 5, count: 1}, 
-            {date: 6, count: 0}
+            {date: "28/3/2022", count: 2}, 
+            {date: "29/3/2022", count: 1}, 
+            {date: "3/4/2022", count: 0}
         ]
     }
 ]

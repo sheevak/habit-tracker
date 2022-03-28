@@ -28,13 +28,13 @@ function Calendar() {
         <div className="calendar-page">
             <h4 className="calendar-title">Calendar</h4>
             <div className="calendar-container">
-                <Day date={dates[0]} index={0}/>
-                <Day date={dates[1]} index={1}/>
-                <Day date={dates[2]} index={2}/>
-                <Day date={dates[3]} index={3}/>
-                <Day date={dates[4]} index={4}/>
-                <Day date={dates[5]} index={5}/>
-                <Day date={dates[6]} index={6}/>
+                <Day date={dates[0]}/>
+                <Day date={dates[1]}/>
+                <Day date={dates[2]}/>
+                <Day date={dates[3]}/>
+                <Day date={dates[4]}/>
+                <Day date={dates[5]}/>
+                <Day date={dates[6]}/>
             </div>
         </div>
     )
