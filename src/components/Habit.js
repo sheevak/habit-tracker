@@ -7,9 +7,8 @@ function Habit(props) {
     const {allHabits, updateComplete} = useContext(Context)
 
     const completed = props.completed.filter(obj => obj.date == props.day);
-    //const [count, setCount] = useState(completed.length === 1 ? completed[0].count: 0);
-
     let count = completed.length === 1 ? completed[0].count: 0;
+    const comp = count === props.frequency[0];
 
     function complete() {
         count += 1
@@ -21,7 +20,7 @@ function Habit(props) {
                 <p className="day-habit-button">
                     {props.name}
                 </p>
-                <button onClick={complete} className="pie" style={{"--width":"20px", "--percentage": count/props.frequency[0]*100, "--color": "red"}} ></button>
+                <button onClick={complete} className="pie" style={{"--width":"20px", "--percentage": count/props.frequency[0]*100, "--color": comp ? "green" : "red"}} ></button>
                 
 
         </div>

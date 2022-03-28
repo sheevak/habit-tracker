@@ -12,9 +12,9 @@ function ContextProvider({children}) {
         const updatedHabitsArr = allHabits.map(habit => {
             if (habitId === habit.id) {
                 let updatedCompleted;
-                if (habit.completed.filter(obj => obj.date == date).length > 0) {
+                if (habit.completed.filter(obj => obj.date === date).length > 0) {
                     updatedCompleted = habit.completed.map(obj => {
-                        if (obj.date == date) {
+                        if (obj.date === date) {
                             obj.count = newCount
                         }
                         return obj
@@ -31,8 +31,6 @@ function ContextProvider({children}) {
         setAllHabits(updatedHabitsArr)
     }
 
-    console.log(allHabits)
-
     return (
         <Context.Provider value={{
             allHabits,
@@ -44,18 +42,3 @@ function ContextProvider({children}) {
 }
 
 export {ContextProvider, Context}
-
-/*
-{
-        id: 0,
-        name: "Read", 
-        frequency: [3, "week"],
-        streak: 0,
-        total: 0,
-        completed: [
-            {date: 3, count: 1}, 
-            {date: 6, count: 1}, 
-            {date: 0, count: 2}
-        ]
-    }
-*/
