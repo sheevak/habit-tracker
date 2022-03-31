@@ -19,8 +19,9 @@ function Calendar() {
         dates.push(date)
     }
 
-    const habitElements = allHabits.map(habit => 
+    const habitElements = allHabits.map((habit, ind) => 
         <Habit 
+            className={"habit" + ind}
             key={habit.id}
             id={habit.id} 
             name={habit.name} 
@@ -34,16 +35,16 @@ function Calendar() {
         <div className="calendar-page">
             <h4 className="calendar-title">Calendar</h4>
             <div className="calendar-container">
-                <div className="days">
-                    <p>mon</p>
-                    <p>tue</p>
-                    <p>wed</p>
-                    <p>thur</p>
-                    <p>fri</p>
-                    <p>sat</p>
-                    <p>sun</p>
+                <div className="grid">
+                    <p></p>
+                    <p>Mon</p>
+                    <p>Tue</p>
+                    <p>Wed</p>
+                    <p>Thur</p>
+                    <p>Fri</p>
+                    <p>Sat</p>
+                    <p>Sun</p>
                 </div>
-
                 {habitElements}
             </div>
         </div>

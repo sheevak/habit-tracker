@@ -42,29 +42,18 @@ header {
     margin: 5px;
 }
 
-.calendar-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    height: 100%;
-}
-
-/* ---- Habit Component ---------------------------------------------- */
-.habit {
-    display: flex;
-    justify-content: space-between;
+.grid {
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content;
+    gap: 5px;
+    justify-items: center;
 }
 
 .habit-title {
-    width: 150px;
+    justify-self: left;
 }
 
-.days {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 250px;
-}
 
 /* ----------------- */
 .pie {
@@ -73,3 +62,11 @@ header {
     border-radius: 50%;
     background: conic-gradient(var(--color) calc(var(--percentage)*1%),#0000 0);
 }
+
+
+/* ---- Grid ---------------------------------*/
+
+
+
+
+

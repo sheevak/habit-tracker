@@ -49,7 +49,7 @@ function Habit(props) {
     )
 
     return (
-        <div className="habit">
+        <div className="grid">
             <h5 className="habit-title">{props.name}</h5>
             {buttonElements} 
         </div>
