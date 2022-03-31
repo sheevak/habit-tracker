@@ -2,7 +2,6 @@ const Data = [{
         id: 0,
         name: "Read", 
         frequency: [1, 7],
-        days: [1, 2, 3, 4, 5, 6, 0],
         streak: 0,
         total: 0,
         completed: [
@@ -15,7 +14,6 @@ const Data = [{
         id: 1,
         name: "Exercise", 
         frequency: [1, 3],
-        days: [1, 3, 6],
         streak: 0,
         total: 0,
         completed: [
@@ -27,7 +25,6 @@ const Data = [{
         id: 2,
         name: "Skin Care", 
         frequency: [2, 7],
-        days: [1, 2, 3, 4, 5, 6, 0],
         streak: 0,
         total: 0,
         completed: [

@@ -48,12 +48,19 @@ header {
     grid-template-rows: max-content;
     gap: 5px;
     justify-items: center;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: var(--color);
 }
 
 .habit-title {
     justify-self: left;
 }
 
+.day {
+    text-align: center;
+}
 
 /* ----------------- */
 .pie {
