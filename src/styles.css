@@ -10,7 +10,7 @@ html, body, #root {
 }
 
 /* ---- General --------------------------------------------------------- */
-.app-container, .calendar-page {
+.app-container, .calendar-page, .habits-page, form {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -29,7 +29,13 @@ header {
     align-items: center;
     padding: 20px 30px;
 
-    background-color: rgb(238, 186, 186);
+    background: rgb(238,174,202);
+    background: linear-gradient(132deg, rgba(238,174,202,1) 0%, rgba(181,218,198,1) 34%, rgba(157,195,224,1) 65%, rgba(213,197,255,1) 86%);
+    color: rgb(214, 214, 214);
+}
+
+.header-title, .header-link {
+    color: rgb(255, 254, 199);
 }
 
 /* ---- Calendar Page ----------------------------------------------- */
@@ -62,7 +68,7 @@ header {
     text-align: center;
 }
 
-/* ----------------- */
+/* ---- Pie Charts ------------- */
 .pie {
     width: var(--width);
     height: var(--width);
@@ -70,8 +76,65 @@ header {
     background: conic-gradient(var(--color) calc(var(--percentage)*1%),#0000 0);
 }
 
+/* ---- Add A Habit -------------------------------------------------------------------------------------------------- */
 
-/* ---- Grid ---------------------------------*/
+form {
+    align-items: center;
+}
+
+input[type="text"], input[type="number"] , fieldset {
+    width: 50%;
+    margin: 10px;
+    padding: 5px;
+}
+
+input[type="text"], input[type="number"] {
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    height: 40px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 1.5em;
+}
+
+
+/* ---- Radio Buttons ------------------ */
+
+input[type="radio"] {
+    display:none;
+}
+
+label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.checkmark {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorRadio);
+    border-radius: 50%;
+
+}
+
+.checkmark:hover {
+    filter: brightness(75%);
+}
+
+input:checked ~ .checkmark { 
+    background-color: white;
+    border: 8px solid var(--colorRadio);
+}
 
 
 

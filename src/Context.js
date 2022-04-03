@@ -8,6 +8,13 @@ function ContextProvider({children}) {
 
     const [allHabits, setAllHabits] = useState(Data)
 
+    const [formData, setFormData] = useState({
+        name: "",
+        target: "",
+        frequency: "",
+        radio: "red"
+    })
+
     function updateComplete(date, habitId, newCount) {
         const updatedHabitsArr = allHabits.map(habit => {
             if (habitId === habit.id) {
@@ -23,18 +30,37 @@ function ContextProvider({children}) {
                     updatedCompleted = habit.completed.push({date: date, count: newCount})
                 }
 
-                return {completed: updatedCompleted, ...habit}
+                let updatedTotal = habit.total;
+
+                if (newCount === habit.frequency[0]) {
+                    updatedTotal += 1;
+                }
+
+                return {completed: updatedCompleted, ...habit, total: updatedTotal}
             }
             return habit
         })
 
-        setAllHabits(updatedHabitsArr)
+        setAllHabits(updatedHabitsArr);
+    }
+
+    function handleChange(event) {
+        const {name, value, type, checked} = event.target;
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [name]: type === "checkbox" ? checked : value
+            }
+        })
+
     }
 
     return (
         <Context.Provider value={{
             allHabits,
-            updateComplete
+            updateComplete,
+            formData,
+            handleChange,
         }}>
             {children}
         </Context.Provider>

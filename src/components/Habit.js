@@ -51,7 +51,7 @@ function Habit(props) {
     return (
         <div className="grid" style={{"--color": "LightGray"}}  >
             <h5 className="habit-title">{props.name}</h5>
-            {buttonElements} 
+            {buttonElements}
         </div>
     )
 
