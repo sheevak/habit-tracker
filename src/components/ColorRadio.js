@@ -4,10 +4,6 @@ import {Context} from "../Context"
 function ColorRadio({color}) {
     const {formData, handleChange} = useContext(Context);
 
-    console.log("render")
-
-
-
     return (
         <label className="radio-container" htmlFor={color}>
             <input 

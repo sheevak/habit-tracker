@@ -10,7 +10,7 @@ html, body, #root {
 }
 
 /* ---- General --------------------------------------------------------- */
-.app-container, .calendar-page, .habits-page, form {
+.app-container, .calendar-page, .habits-page, form, .habits-add-container {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -79,13 +79,14 @@ header {
 /* ---- Add A Habit -------------------------------------------------------------------------------------------------- */
 
 form {
+    align-self: center;
     align-items: center;
+    width: 50%;
 }
 
-input[type="text"], input[type="number"] , fieldset {
-    width: 50%;
-    margin: 10px;
-    padding: 5px;
+input[type="text"], input[type="number"] , fieldset, .habit-add-submit {
+    width: 100%;
+    padding: 10px;
 }
 
 input[type="text"], input[type="number"] {
@@ -93,15 +94,43 @@ input[type="text"], input[type="number"] {
     border-radius: 5px;
     background-color: lightblue;
     height: 40px;
+    margin: 5px auto 25px auto;
 }
 
 fieldset {
     border: none;
+    text-align: center;
+    padding: 5px 0 25px 0;
 }
 
-legend {
-    font-size: 1.5em;
+legend, label, .habit-add-submit {
+    font-size: 1.4em;
+    align-self: flex-start;
 }
+
+.habit-add-submit {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    font-weight: 700;
+
+    color: rgb(255, 254, 199);
+
+    background: rgb(238,174,202);
+    background: linear-gradient(132deg, rgba(238,174,202,0.9) 0%, rgba(181,218,198,0.9) 34%, rgba(157,195,224,0.9) 65%, rgba(213,197,255,0.9) 86%);
+    box-shadow: 6px 6px 6px #D6D7D9;
+}
+
+.habit-add-submit:hover {
+    box-shadow: 4px 4px 4px #D6D7D9;
+}
+
+.habit-add-submit:active {
+    box-shadow: 2px 2px 2px #D6D7D9, inset 0 0 20px 20px #c2bfc14f;
+}
+
 
 
 /* ---- Radio Buttons ------------------ */
@@ -110,12 +139,12 @@ input[type="radio"] {
     display:none;
 }
 
-label {
+.radio-container {
+    text-align: center;
     display: inline-block;
     width: 25px;
     height: 25px;
     margin-right: 15px;
-    cursor: pointer;
 }
 
 .checkmark {
