@@ -9,6 +9,26 @@ html, body, #root {
     height: 100%;
 }
 
+:root {
+    --reddark: rgb(255, 93, 93);
+    --greendark: rgb(135, 250, 135);
+    --bluedark: rgb(88, 155, 255);
+    --orangedark: rgb(255, 195, 82);
+    --pinkdark: rgb(255, 169, 226);
+    --aquadark: rgb(151, 255, 255);
+    --purpledark: rgb(229, 101, 255);
+    --yellowdark: rgb(246, 255, 123);
+
+    --red: rgb(255, 164, 164);
+    --green: rgb(211, 253, 211);
+    --blue: rgb(161, 199, 255);
+    --orange: rgb(255, 219, 152);
+    --pink: rgb(255, 213, 241);
+    --aqua: rgb(214, 255, 255);
+    --purple: rgb(242, 180, 255);
+    --yellow: rgb(251, 255, 193);
+}
+
 /* ---- General --------------------------------------------------------- */
 .app-container, .calendar-page, .habits-page, form, .habits-add-container {
     display: flex;
@@ -73,7 +93,8 @@ header {
     width: var(--width);
     height: var(--width);
     border-radius: 50%;
-    background: conic-gradient(var(--color) calc(var(--percentage)*1%),#0000 0);
+    border: 2px solid var(--border);
+    background: conic-gradient(var(--color) calc(var(--percentage)*1%), rgba(255, 255, 255, 0) 0);
 }
 
 /* ---- Add A Habit -------------------------------------------------------------------------------------------------- */

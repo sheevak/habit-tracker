@@ -7,7 +7,7 @@ import ColorRadio from "../components/ColorRadio"
 function Habits() {
     const {formData, handleChange, addHabit} = useContext(Context);
 
-    const colors = ["red", "green", "blue", "orange", "pink", "navy", "tomato", "lime"];
+    const colors = ["red", "green", "blue", "yellow", "orange", "pink", "aqua", "purple"];
 
     const colorElements = colors.map(color => 
         <ColorRadio
@@ -19,7 +19,6 @@ function Habits() {
     function handleSubmit (event) {
         event.preventDefault()
         addHabit()
-        console.log("submitted")
     }
 
     return (

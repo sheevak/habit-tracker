@@ -4,6 +4,8 @@ import {Context} from "../Context"
 function ColorRadio({color}) {
     const {formData, handleChange} = useContext(Context);
 
+    const cssColor = "var(--" + color + ")"
+
     return (
         <label className="radio-container" htmlFor={color}>
             <input 
@@ -18,7 +20,7 @@ function ColorRadio({color}) {
             <span 
                 className="checkmark" 
                 style={{
-                    "--colorRadio": color
+                    "--colorRadio": cssColor
                 }} 
             ></span>
         </label>

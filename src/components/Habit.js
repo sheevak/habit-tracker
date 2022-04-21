@@ -1,8 +1,11 @@
+import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils"
 import react, {useState, useContext} from "react"
 import {Context} from "../Context"
 
 function Habit(props) {
     const {allHabits, updateComplete} = useContext(Context)
+    const cssColor = "var(--" + props.color + ")"
+    const cssColorDark = "var(--" + props.color + "dark)"
 
     //arrays to track the count and completed values for this habit
     const countArray = [];
@@ -41,15 +44,16 @@ function Habit(props) {
             onClick={() => complete(ind)} 
             className="pie" 
             style={{
-                "--width":"20px", 
+                "--width":"22px", 
                 "--percentage": countArray[ind]/props.frequency[0]*100, 
-                "--color": completedArray[ind] ? "green" : "red"
+                "--color": completedArray[ind] ? cssColorDark : cssColorDark,
+                "--border" : completedArray[ind] ? cssColorDark : "white"
             }} 
         ></button>
     )
 
     return (
-        <div className="grid" style={{"--color": props.color}}  >
+        <div className="grid" style={{"--color": cssColor}}  >
             <h5 className="habit-title">{props.name}</h5>
             {buttonElements}
         </div>
