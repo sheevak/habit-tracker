@@ -55,12 +55,32 @@ function ContextProvider({children}) {
 
     }
 
+    function addHabit() {
+        const newHabit = {
+            id: allHabits.length,
+            name: formData.name, 
+            frequency: [parseInt(formData.target), parseInt(formData.frequency)],
+            streak: 0,
+            total: 0,
+            completed: [],
+            color: formData.radio
+        }
+        setFormData({
+            name: "",
+            target: "",
+            frequency: "",
+            radio: "red"
+        })
+        setAllHabits(prev => [...prev, newHabit])
+    }
+
     return (
         <Context.Provider value={{
             allHabits,
             updateComplete,
             formData,
             handleChange,
+            addHabit
         }}>
             {children}
         </Context.Provider>

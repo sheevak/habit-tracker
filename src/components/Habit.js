@@ -49,7 +49,7 @@ function Habit(props) {
     )
 
     return (
-        <div className="grid" style={{"--color": "LightGray"}}  >
+        <div className="grid" style={{"--color": props.color}}  >
             <h5 className="habit-title">{props.name}</h5>
             {buttonElements}
         </div>

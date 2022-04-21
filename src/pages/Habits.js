@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import ColorRadio from "../components/ColorRadio"
 
 function Habits() {
-    const {formData, handleChange} = useContext(Context);
+    const {formData, handleChange, addHabit} = useContext(Context);
 
     const colors = ["red", "green", "blue", "orange", "pink", "navy", "tomato", "lime"];
 
@@ -18,6 +18,7 @@ function Habits() {
 
     function handleSubmit (event) {
         event.preventDefault()
+        addHabit()
         console.log("submitted")
     }
 

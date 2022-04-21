@@ -32,6 +32,7 @@ function Calendar() {
             dates={dates}
             frequency={habit.frequency}
             completed={habit.completed}
+            color={habit.color}
         />
     )
 

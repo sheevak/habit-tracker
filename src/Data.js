@@ -8,7 +8,8 @@ const Data = [{
             {date: "28/3/2022", count: 1}, 
             {date: "29/3/2022", count: 1}, 
             {date: "2/4/2022", count: 1}
-        ]
+        ],
+        color: "red"
     },
     {
         id: 1,
@@ -19,7 +20,8 @@ const Data = [{
         completed: [
             {date: "28/3/2022", count: 1},  
             {date: "30/3/2022", count: 1}
-        ]
+        ],
+        color: "green"
     },
     {
         id: 2,
@@ -31,7 +33,8 @@ const Data = [{
             {date: "28/3/2022", count: 1}, 
             {date: "31/3/2022", count: 1}, 
             {date: "3/4/2022", count: 2}
-        ]
+        ],
+        color: "blue"
     }
 ]
 
